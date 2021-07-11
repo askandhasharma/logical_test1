@@ -19,13 +19,13 @@ pipeline {
                  
 //             }
 //         }
-          stage('build') {
-            steps {
-                sh 'javac App.java'
-                sh 'java App'
+//           stage('build') {
+//             steps {
+//                 sh 'javac App.java'
+//                 sh 'java App'
                 
-            }
-        }
+//             }
+//         }
         
 //         stage('Cloning Git') {
 //             steps {
@@ -37,7 +37,7 @@ pipeline {
     stage('Building image') {
       steps{
         script {
-             sh 'java App'
+            // sh 'java App'
              dockerImage = docker.build registry
         }
       }
