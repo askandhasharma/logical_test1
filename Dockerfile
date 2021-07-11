@@ -1,7 +1,8 @@
 #base image
 FROM openjdk:8
-WORKDIR /logical_test1
+COPY . /src/java
+WORKDIR /src
 RUN chmod +x Shell.sh
-ENTRYPOINT ["/logical_test1/Shell.sh"]
+ENTRYPOINT ["/src/Shell.sh"]
 
 
