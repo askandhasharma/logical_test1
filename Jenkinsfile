@@ -23,7 +23,7 @@ pipeline {
             steps {
                 sh 'javac App.java'
                 sh 'java App'
-                dockerImage = docker.build registry
+                
             }
         }
         
@@ -33,14 +33,15 @@ pipeline {
 //             }
 //         }
   
-    // Building Docker images
-//     stage('Building image') {
-//       steps{
-//         script {
-//             dockerImage = docker.build registry
-//         }
-//       }
-//     }
+    Building Docker images
+    stage('Building image') {
+      steps{
+        script {
+             sh 'java App'
+             dockerImage = docker.build registry
+        }
+      }
+    }
    
     // Uploading Docker images into AWS ECR
     stage('Pushing to ECR') {
