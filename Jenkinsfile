@@ -6,7 +6,7 @@ pipeline {
         IMAGE_REPO_NAME="jenkins-pipeline-demo"
         IMAGE_TAG="latest"
         REPOSITORY_URI = "${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_DEFAULT_REGION}.amazonaws.com/${IMAGE_REPO_NAME}"
-        Registry="273238733535.dkr.ecr.us-east-1.amazonaws.com/jenkins-pipeline-demo"
+        Registry = "273238733535.dkr.ecr.us-east-1.amazonaws.com/jenkins-pipeline-demo"
     }
    
     stages {
