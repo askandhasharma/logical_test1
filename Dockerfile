@@ -2,7 +2,7 @@
 FROM openjdk:8
  
 ADD Shell.sh /
-RUN Shell.sh
+RUN /Shell.sh
 
 
 # RUN chmod +x Shell.sh
